@@ -1,0 +1,175 @@
+<html>
+    <title>learning</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\Lokesh\Desktop\training\OIP.jpg">
+    <link rel="icon" type="image/x-icon" href="C:\Users\Lokesh\Desktop\training\OIP.jpg">
+    <head>
+        <style>
+            table{
+                border: 1px solid black;
+                width:90%;
+                border-radius: 5px;
+                border-spacing:10px;
+
+            }
+            tr:nth-child( odd){
+                background-color: blue;
+
+            }
+            th{
+                align-items: center;
+                background-color: aqua;
+                 border-radius:5px ;
+                 border-spacing: 50pxS;
+                 
+            }
+            td{
+                background-color: aquamarine;
+                border-spacing:10px;
+            }
+            .left{
+                background-color: aqua;
+                float:left;
+                width:60%;
+                padding:20px;
+            }.main{
+                background-color: bisque;
+                float:left;
+                width:20%;
+                padding:20px
+            }
+            .right{
+                background-color: green;
+                float:left;
+                width:20%;
+                padding:20px
+            }
+         @media screen and(max-width:800px) {
+            .left,.main,.right{
+                width:100%;
+            }
+            
+         }
+        </style>
+
+    </head>
+    <body>
+        <picture>
+            <!--to take the picture from other source-->
+            <source media="(min-width: 650px)" srcset="img_food.jpg">
+            <source media="(min-width: 465px)" srcset="img_car.jpg">
+            <img src="img_girl.jpg" style="width:auto;">
+          </picture>
+          <!--to create a table and rows and coloums in it-->
+          <table>
+            <tr>
+                <th colspan="3"> details about the students</th>
+            </tr>
+            <tr>
+                <th style="width:70%">name</th>
+                <th>class </th>
+                <th>Roll NO</th>
+
+            </tr>
+            <tr>
+                <td>Lokesh</td>
+                <td>8th </td>
+                <td>2233</td>
+
+            </tr>
+            <tr>
+                <td>Lokesh</td>
+                <td>8th </td>
+                <td>2233</td>
+
+            </tr>
+          </table>
+          <!--decribes the list -->
+          <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+          </dl>
+          <!--decribes about the span -->
+          <p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
+          <!-- An element with a unique id -->
+            <h1 id="myHeader">My Cities</h1>
+            <button onclick="myfunction()" type="button">click</button>
+            <p id="hi">how are you ?</p>
+            <script>
+                function myfunction(){
+                    document.getElementById("hi").innerHTML="i am fine";
+                    documnet.getElementById("hi").style.color="red";
+                    documnet.getElementById("hi").style.backgroundColor="red";
+
+                }
+
+
+            </script>
+            <!----Creating a responsive web-->
+          <!---- <picture>
+                <source srcset="C:\Users\Lokesh\Desktop\training\img_smallflower.jpg" media="(max-width:600px)">
+                <source srcset="C:\Users\Lokesh\Desktop\training\img_flowers.jpg" media="(max-width:1000px)">
+                <img src="C:\Users\Lokesh\Desktop\training\img_smallflower.jpg" style="width:auto;height:auto;" alt="flower">
+                </picture>-->
+            <!--creating a responsive for menu-->
+            <div class="left">
+                <p>left</p>
+            </div>
+            <div class="main">
+                <p>main</p>
+            </div>
+            <div class="right">
+                <p>right</p>
+            </div>
+            <br>
+            <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+            <P>the entity is &#60</P>
+            <!--to display the emoji symboles-->
+            <P>the entity is &#128513;</P>
+            <!--to display a horizontal line-->
+            <hr>
+            <!---the form attributes such as method(get or post),action, target-->
+            <!--Input attributes are the values,readonly,size,maximum length and minimum length,pattern,placeholder,requiredS,step,autofocus,height and the width-->
+            <!--example for declaring the patter [1-9]{2}-[a-b]{3}-[A-B]{2}-->
+            
+
+            <video width="320" id="vidio" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+              <button onclick="play()">play</button>
+              <button onclick="pause()">pause</button>
+              <button onclick="big()">big</button>
+              <button onclick="small()">small</button>
+              <script>
+               var video=document.getElementById("video");
+              
+              function play(){
+                if(video.pause){
+                    video.play();
+                }
+              }
+              function pause(){
+                if(vidio.play){
+                    video.pause();
+                }
+              }
+              function big(){
+                if(vidio.small){
+                    video.width=500;
+                }
+              }
+              function small(){
+                if(vidio.big){
+                    video.width=100;
+                }
+              }
+              </script>
+
+
+
+
+    </body>
+</html>

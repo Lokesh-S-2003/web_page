@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Object Defination</title>
+    </head>
+    <body>
+        <p id="no1"></p>
+        <p id="no2"></p>
+        <p id="no3"></p>
+        <p id="no4"></p>
+
+
+        <p id="demo"></p>
+        <p id="no8">0</p>
+        <p id="no10"></p>
+        <p id="no7"></p>
+
+        
+
+        
+
+        
+
+        <script>
+            /*declaring the object using a object literals*/
+            const person={
+                firstName:"lokesh",
+                lastName:"deepa",
+                age:21,
+                fullName:function(){
+                    return this.firstName+" "+this.lastName;
+                }
+                
+            };
+            /* to add the property*/
+            person.eyecolor="red";
+            person.height=5.9
+            document.getElementById("no1").innerHTML=person.eyecolor+" is the eye color and the person name is "+person.firstName+"<br> The full name is"+person.fullName();
+        </script>
+        <Script>
+            /*object constructore*/
+            function name1(name,last,weight){
+                this.Firstname=name;
+                this.lastName=last;
+                this.wight=weight;
+                this.nationality="Indian";
+            }
+            name1.prototype.add=function(){
+                return this.Firstname+" "+this.lastName;
+            }
+            const person2=new name1("lokesh","deepa",54);
+            const person3=new name1("manoj","n",76);
+            name1.prototype.mood="good"
+            document.getElementById("no2").innerHTML="The name is "+person3.wight+" and the nationality is "+person3.nationality+"  "+person3.mood
+            +"the added function is"+person2.add();
+        </Script>
+            <script>
+                const object={
+                    usn:"456",
+                    class:"12",
+                    language:"english",
+                    get lang(){
+                        return this.language.toUpperCase();
+
+                    },
+                    set lang2(value){
+                        this.language=value;
+                    }
+                };
+                object.lang2="kannada"
+                document.getElementById("no3").innerHTML=object.lang;
+            </script>
+            <script>
+                
+                function myFunction2(y){
+                    return y*y;
+                }
+                let z=myFunction2(5);
+
+            //document.getElementById("no5").innerHTML=z;
+            </script>
+            <script>
+                function myFunction(a, b) {
+                  return a * b;
+                }
+                document.getElementById("demo").innerHTML = window.myFunction(10, 2); 
+                </script>
+                <script>
+                    const person11={fullname1:function(){
+                        return this.firstName1+" "+this.lastName2;
+                    }
+                }
+                    const person4={
+                        firstName1:"lokesh",
+                        lastName2:"deepa"
+                    }
+                    const person5={
+                        firstName1:"lokesh2",
+                        lastName2:"deepa2"
+                    }
+                    document.getElementById("no4").innerHTML=person11.fullname1.call(person5)
+                </script>
+                <button type="button"onclick="func2()">click</button>
+                <script>
+                    function func(){
+                        let counter=0;
+                        return function(){
+                            counter++;
+                            return counter;
+                        };
+                    }
+                    let add=func();
+                    function func2(){
+                    document.getElementById("no8").innerHTML=add();
+                    }
+                </script>
+                <script>
+                    //working on the javascript classes
+                    class car{
+                        constructor(brand){
+                            this.carname=brand;
+                        }
+                        present(){
+                            return "I have the car"+this.carname;
+                        }}
+                        class Model extends car{
+                            constructor(brand,mod){
+                                super(brand);
+                                this.model=mod;
+                            }
+                            show(){
+                                return this.present()+"   "+this.model;  
+                            }
+
+                        }
+                            let mycar=new Model("ford","mustang");
+                            document.getElementById("no10").innerHTML=mycar.show();
+
+                        
+                    
+                </script>
+                <script>
+                    function display(some){
+                        document.getElementById("no7").innerHTML=some
+                    }
+                    function calc(num1,num2){
+                        let sum=num1+num2;
+                        display(sum);
+                    }
+                    calc(15,5);
+
+                </script>
+</body>
+</html>

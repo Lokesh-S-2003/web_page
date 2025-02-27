@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Day 10 of learning</title>
+    </head>
+    <body>
+        <p id="no1"></p>
+        <p id="no2"></p>
+        <p id="no3"></p>
+        <p id="no4"></p>
+        <p id="no6"></p>
+        <p id="no5"></p>
+        <p id="no7"></p>
+
+        
+
+
+
+        
+
+
+        <script>
+            const letter=new Set(["a","b","c","d"]);
+
+            const value=letter.values();
+            let text="";
+            for(let x of value){
+                text+=x+"</br>"
+            }
+            document.getElementById("no1").innerHTML=text
+        </script>
+        <!--Creating the map wher the map holds the array-->
+    <script>
+        let items=new  Map([
+        ["apple",500],
+        ["Mango",500],
+        ["bannana",500],
+        ])
+        let text1="";
+       items.forEach(function(key,value){
+         text1+=value+"="+key+"</br>";
+       })
+
+
+        document.getElementById("no2").innerHTML=text1;
+    </script>
+    <!--Working with the map.groupby()-->
+    <script>
+        const fruits = [
+  {name:"apples", quantity:300},
+  {name:"bananas", quantity:500},
+  {name:"oranges", quantity:200},
+  {name:"kiwi", quantity:150}
+];
+function callback({quantity}){
+    return quantity>200 ?"ok":"low";
+}
+const result=Map.groupBy(fruits,callback);
+
+let text3="This fruit is ok<br>"
+for(let y of result.get("ok")){
+    text3+=y.name+"="+y.quantity+"<br>";
+}
+
+ text3+="This fruit is ok<br>"
+for(let y of result.get("low")){
+    text3+=y.name+"="+y.quantity+"<br";
+}
+document.getElementById("no3").innerHTML=text3;
+console.log(result.get("ok"));
+
+
+
+    </script>
+    <!--Working in the destructuring-->
+    <script>
+    let text5="hello world";
+    let[a1,a2,a3,a4,a5]=text5;
+    document.getElementById("no4").innerHTML=a1;
+    </script>
+    <script>
+        const person1={
+            fullname:function(){
+                return this.firstname+""+this.lastname;
+            }
+        }
+        const person2={
+            firstname:"lokesh",
+            lastname:"deepa",
+        }
+        let p= person1.fullname.call(person2)
+        document.getElementById("no6").innerHTML=p;
+    </script>
+    <!--Workin with the arrow function which makes the short syntax-->
+    <script>
+        let hello=(val)=>
+         "hello world" +val;
+        
+        document.getElementById("no5").innerHTML=hello(2000);
+    </script>
+    <script type="module">
+            import message from "./message.js";
+            document.getElementById("no7").innerHTML=message;
+
+         </script>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>Day Eight of Learning</title>
+</head>
+    <body>
+        <p id="no1"></p>
+        <p id="no2"></p>
+        <p id="no3"></p>
+        <p id="no4"></p>
+        <p id="no5"></p>
+        <p id="no6"></p>
+        <p id="no7"></p>
+        <p id="no8"></p>
+        <p id="no9"></p>
+        <p id="no10"></p>
+        <p id="no11"></p>
+        <p id="no12"></p>
+        <p id="no13"></p>
+        <p id="no14"></p>
+        <p id="no15"></p>
+        <p id="no16"></p>
+        <p id="no17"></p>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        <script>
+            let car={type:"hachbach",model:"2015",price:"4lk"};
+            document.getElementById("no1").innerHTML=car.model;
+        </script>
+        <!--Creating a empty object and adding the property in the other side-->
+        <script>
+            let details={};
+            details.name="lokesh";
+            details.address="mysore";
+            details.state="karnataka";
+            document.getElementById("no2").innerHTML=details.address;</script>
+<!--Writing the code within the property-->
+<script>
+    let numbers={
+        firstname:"lokesh",
+        lastname:"deepa",
+        fullname:function(){
+            return this.firstname+" "+this.lastname;
+        }
+    };
+    document.getElementById("no3").innerHTML =numbers.fullname();
+</script>  
+<!---The Objects are thhe mutable they addres by the reference not by the value-->
+<script>
+    const college={
+        name:"atme",
+        no_of_intake:60,
+    }
+    const x=college
+    x.no_of_intake=90;
+    document.getElementById("no4").innerHTML=college.no_of_intake;
+</script>   
+<!--Object acccessing-->   
+<script>
+    let company={
+        cFirstname:"kasmo",
+        clastname:"IT"
+    }
+    let g="cFirstname";
+    let d="clastname";
+    document.getElementById("no5").innerHTML="The name of the company is"+company[g]+company[d];
+</script>
+<!--Adding the method to the object-->
+<script>
+const area={
+    name:"TK layout",
+    pincode:570009,
+    district:"mysore"
+
+};
+area.details= function(){
+    return (this.name+"and"+this.pincode+" and "+this.district).toUpperCase();
+}
+document.getElementById("no6").innerHTML=area.details();
+</script>
+<!--Displaying the values by using the loop-->
+<script>
+    const information={
+        name:"lokesh",
+        class:"puc",
+        age:18
+    }
+    let all="";
+    for (let x in information){
+        all+=information[x]+" "
+    }
+    document.getElementById("no7").innerHTML=all;
+    /* by using the object values*/
+    document.getElementById("no8").innerHTML=Object.values(information);
+
+</script>
+<!--Using the object entries-->
+<script>
+    const fruit={
+        banana:100,
+        apple:200,
+        ango:400
+    }
+    let text=""
+    for(let[fruits, amount]of Object.entries(fruit)){
+        text+=fruits+" "+amount+"<br>";
+
+    }
+    let string=JSON.stringify(fruit)
+    document.getElementById("no9").innerHTML=text;
+    document.getElementById("no10").innerHTML=string;
+</script>
+<!--Ceating the objects constructor-->
+<script>
+    function person(first,last,age){
+        this.firstname=first;
+        this.lastname=last;
+        this.age=age;
+        this.nationality="indian"
+        this.fullname=function(){
+            return this.firstname+""+this.lastname;
+        }
+
+    }
+    const information2=new person("loki","deepa",20);
+    person.prototype.minheight="170cm"
+    document.getElementById("no11").innerHTML=information2.age+" the nationality is "+information2.nationality+""+information2.minheight+"the full name is "+information2.fullname();
+</script>
+<!--String search method-->
+<script>
+    let text3="hello how are you hello how";
+    let searchtext=text3.lastIndexOf("how");
+    document.getElementById("no12").innerHTML=searchtext;
+
+</script>
+<!--Introducing the html in the javascript-->
+<script>
+    let header="This are the templates";
+    let footer=["apple","banana","mango"];
+
+    let html=`$<h1>${header}</h1><ul>`
+    for(let p of footer){
+        html+=`<li>${p}</li>`;
+
+    }
+    html+=`</ul>`;
+    document.getElementById("no13").innerHTML=html;
+</script>
+<script>
+    let cars_title="This are the Cars Name";
+    let array=["BMW","Adui","benze","AMG"];
+    let html1=`<h1>${cars_title}</h1><ul>`;
+    for (let q of array){
+        html1+=`<li>${q}</li>`;
+    }
+    html1+=`</ul>`
+    document.getElementById("no14").innerHTML=html1
+</script>
+<!---Creating a array-->
+<script>
+    let items=["pen","pencile","book","rubber"];
+    document.getElementById("no15").innerHTML=items;
+</script>
+<!--Creating the array using the javascript keyword-->
+<script>
+    let cars=new Array("pen","book","rubber","pencile");
+    document.getElementById("no16").innerHTML=cars;
+
+</script>
+<!---Converting the array into the string-->
+<script>
+    let phones=["mi","iphone","vivo","oppo"]
+    document.getElementById("no17").innerHTML=phones.toString();
+</script>
+    </body>
+</html>
