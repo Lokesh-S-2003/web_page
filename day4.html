@@ -1,0 +1,201 @@
+<!--HSL stands for Hue, Saturation, and Lightness. It is a way to represent colors in the sRGB color space, providing a more intuitive way to work with colors compared to the traditional RGB model.
+
+Components of HSL
+
+Hue: This represents the color type and is measured in degrees on the color wheel from 0 to 360. For example, 0 (or 360) is red, 120 is green, and 240 is blue
+1
+.
+
+Saturation: This defines the intensity or purity of the color. It is a percentage value from 0% to 100%. At 100%, the color is fully saturated with no shades of gray, while at 0%, the color is completely gray
+1
+.
+
+Lightness: This determines the brightness of the color. It is also a percentage value from 0% to 100%. At 0%, the color is completely black, at 50%, it is neither dark nor light, and at 100%, it is completely white
+1
+.-->
+<html>
+    <head>
+        <link  rel="icon"   type="image/icon" href="C:\Users\Lokesh\Desktop\training\img_smallflower.jpg" >
+        <title>
+            Day four of Learning
+            </title>
+            
+    </head>
+    <body><!--defines the how the border and the heading are used in the html tags-->
+        <h1 style="
+        background-color: aquamarine;
+        opacity: 0.7;
+        text-align: center;
+        border:5px brown ;
+        border-style: solid;
+        outline-style: solid;
+        outline-color: black;
+
+            ">Day four of learning</h1>
+            <img src="C:\Users\Lokesh\Desktop\training\tree2.jpg" style="float:right;
+            width: 20%;
+            height: auto;
+            ">
+            <!---to add the icons in the webpage-->
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+            <i class="fas fa-cloud"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-car"></i>
+            <!--how to handle the link-->
+            <a href="###" style="
+            a:link{
+                color:red
+            }a:visted{
+                color:green;
+                a:hover{
+                    color:chartreuse;
+
+                }
+                a:active{
+                    color:brown;
+                }
+
+            }"
+            >click on the link</a>
+            <div style="border: 2px solid;float:left">hello</div>
+            <div style="border: 2px solid;clear:left;width:70%">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+    
+         
+     <!--Creating a Navigation bar-->
+    <style>
+        ul{
+            background-color: black;
+            height: 33px;
+            width:70%;
+            margin: 0px;
+            padding:0px;
+            overflow: hidden;
+        
+        }
+        li{
+            display: inline-block;
+            
+        }
+        
+        li a{
+            display: inline-block;
+            text-align: center;
+            padding:10px 16px;
+            text-decoration: none;
+            color: aliceblue;
+            overflow: hidden;
+        
+                        
+        }
+    li a:hover{
+            background-color: chartreuse;
+            margin-top: 0;
+            overflow: hidden;
+            
+        }
+        
+        @media screen and (max-width: 480px) {
+  li , li a  {
+    display: block;
+    background-color: black;
+    color: red;
+  }
+}
+            
+        
+    </style>
+    <br>
+    <ul>
+        <li ><a href="##">Home</a></li>
+        <li><a href="##">Contents</a></li>
+        <li><a href="##">news</a></li>
+        <li><a href="###">about</a></li>
+
+    </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!---Creating a page with the header ,footer and contents and the decribtion-->
+    <style>
+        .header,.footer{
+            width:100%;
+            background-color: gray;
+            color: black;
+            border: 5ox solid black;
+            padding-left: 40px;
+            height: 100px;
+            padding-top: 20px;
+
+        }.content{
+            width:25%;
+            height:200px;
+            float: left;
+            
+
+        }
+        .description{
+            width:100%;
+            height:282px;
+            background-color: aliceblue;
+        
+            margin-right: 25%;
+
+
+        }.list{
+            width:60%;
+            height: 300px;
+            background-color: aqua;
+            box-sizing:border-box;
+            list-style-type:none ;
+            margin:0;
+            padding:0;
+            float: left;
+    
+
+            
+
+        }.li1{
+            float: left;
+            width:100%;
+            padding:20px;
+            margin-top: 10px;
+            
+            
+        }
+        .li1:hover{
+            background-color:aquamarine;
+            margin-right: 40px;
+            
+            
+        }.h{
+            padding: 50px;
+        }
+
+
+    </style>
+<div class="header"><h1>
+    This is header</h1>
+    
+</div>
+<div class="content">
+    <ul class="list">
+    <li class="li1">HOME</li>
+    <li class="li1">CONTENTS</li>
+    <li class="li1">NEWS</li>
+    <li class="li1">ABOUT</li>
+</ul>
+</div>
+<div class="description" class="h"><h3 style="text-align: center;vertical-align:middle;display: flex;">This page defines the content with the header and the footer with the decriptions</h3> </div>
+<div class="footer"><h1 >This is footer</h1></div>
+<!---The display: flex property in CSS is the layout model that allows you to arrange the items
+ inside the container flexibly and responsively.
+  When applied to the container, 
+  it can enable the children (flex items) to be distributed along the specific axis, 
+  either horizontally or vertically, while adjusting their sizes dynamically to fit within the container space.-->
+        </body>
+</html>
