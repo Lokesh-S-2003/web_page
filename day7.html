@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Day seven of learning</title>
+    </head>
+    <body>
+        <button onclick="information()">click on me</button>   
+        <p id="demo"></p>
+        <script>
+            function information(){
+                document.getElementById("demo").innerHTML=Date();
+            }
+        </script>
+        <!--Script two task-->
+        <button onclick="info2()">click on me to change the information</button>
+        
+        <script>
+            function info2(){
+                document.getElementById("demo2").innerHTML="hello world"
+
+            }
+        </script>
+        <p id="demo2">This is the first content</p>
+
+        <!--Creating a blub off and on using the javascript-->
+        <button onclick="onfunc()">TO turn ON</button>
+        <img src="pic_bulboff.gif"id="img" width="90px">
+        <button onclick="offfunc()">TO turn OFF</button>
+<script>
+    function onfunc(){
+        document.getElementById("img").src="pic_bulbon.gif"
+    }
+    function offfunc(){
+        document.getElementById("img").src="pic_bulboff.gif"
+    }
+</script>
+<!--Using the javascript to change the Style-->
+<h1><!--Using the javascript to change the Style--></h1>
+<p id="change">Hello world Welcome to KASMO</p>
+<button onclick="document.getElementById('change').style.fontSize='100px'">Click to change</button>
+<button  onclick="document.getElementById('change').style.fontSize='20px'">click to reduce to normal size</button><br><br><br>
+<!--Javascript to hide the blocks-->
+<p id="hide"style="display:none">Hello world</p>
+<button onmouseover="document.getElementById('hide').style.display='block'"
+onmouseout="document.getElementById('hide').style.display='none'">Mouseover</button>
+<br>
+<br>
+<!--JavaScript display possiblity-->
+<h3>JavaScript display possiblity</h3>
+<P id="display"></P>
+<button onclick="document.getElementById('display').innerHTML='hello world'">InnerHTML</button>
+<button oncli(ck="document.write(11+5)">document.write</button>
+<button onclick="window.alert('hello how are you?')">Window alert</button>
+<button onclick="window.print()">window.print</button>
+<button onclick="console.log(5+14)">Console.log</button>
+<!--Javascript statments-->
+<h3><!--Javascript statments--></h3>
+<p id="stat"></p>
+<p id="stat1"></p>
+<p id="stat2"></p>
+
+<button onclick="two()">To Print Multiple statments</button>
+<script>
+    let x,y,z;
+    x=9;
+    y=10;
+    z=x+y;
+    document.getElementById("stat").innerHTML="The Value is"+" "+z+".";
+    function two(){
+        document.getElementById("stat1").innerHTML="hello!!!";
+        document.getElementById("stat2").innerHTML="Welcome to Kasmo!!!";
+
+    }
+</script>
+<!--Using the javascript with the array -->
+<p id="constant"></p>
+<script>
+    const cars=["BMW","Benze","AMG"];
+    cars[0]="Toyata";
+    cars.push("audi");
+    document.getElementById("constant").innerHTML=cars;
+</script>
+<!---For the contsant values-->
+<script>
+    const car={type:"suv",model:"2015",color:"red"};
+    car.type="hatchbach";
+    car.model="2025";
+
+    document.getElementById("con21").innerHTML="The cars color is"+car.color;
+</script>
+<p id="con21"></p>
+<!--Operators in the javascript-->
+<script>
+    let p=5;
+    let q=10;
+    let r=x+y;
+    document.getElementById("con3").innerHTML=r;
+</script>
+<p id="con3"></p>
+    </body>
